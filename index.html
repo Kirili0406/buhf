@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Змейка — Игра</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-card">
+      <div class="hud">
+        <div class="score">
+          <div class="pill">Счёт: <span id="score" class="num">0</span></div>
+          <div class="pill">Рекорд: <span id="best" class="num">0</span></div>
+        </div>
+
+        <div class="top-buttons">
+          <button id="themeBtn" class="btn" title="Переключить тему">🌙</button>
+          <button id="modeBtn" class="btn" title="Режим игры">Стандарт</button>
+          <button id="pauseBtn" class="btn" title="Пауза / возобновить">⏸</button>
+          <button id="restartBtn" class="btn" title="Новая игра">🔄</button>
+        </div>
+      </div>
+
+      <canvas id="game" width="600" height="600" aria-label="Поле игры"></canvas>
+
+      <div class="controls small-muted">Управление: стрелки / WASD / кнопки под правой панелью. На мобильных — свайпы или кнопки.</div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="big" id="status">Готова</div>
+        <div class="hint" style="margin-top:8px">
+          Ешь яблоки 🍎, чтобы змейка росла. В режиме "Со стенами" границы убивают — в стандартном режиме змейка проходит сквозь края.
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="small-muted">Управление для тач-устройств:</div>
+        <div class="touch-gestures">
+          <div class="touch-btn" id="upBtn">↑</div>
+          <div class="touch-arrows">
+            <div class="touch-btn" id="leftBtn">←</div>
+            <div class="touch-btn" id="rightBtn">→</div>
+          </div>
+          <div class="touch-btn" id="downBtn">↓</div>
+        </div>
+      </div>
+    </aside>
+
+    <footer>🐍 Змейка — by ChatGPT</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
